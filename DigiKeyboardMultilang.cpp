@@ -24,6 +24,26 @@ void DigiKeyboardMultilang::println(const char str[]) {
     DigiKeyboard.sendKeyStroke(KEY_ENTER);
 }
 
+void DigiKeyboardMultilang::delay(long milli) {
+    DigiKeyboard.delay(milli);
+}
+
+void DigiKeyboardMultilang::sendKeyPress(byte keyPress) {
+    DigiKeyboard.sendKeyPress(keyPress);
+}
+
+void DigiKeyboardMultilang::sendKeyPress(byte keyPress, byte modifiers) {
+    DigiKeyboard.sendKeyPress(keyPress, modifiers);
+}
+
+void DigiKeyboardMultilang::sendKeyStroke(byte keyStroke) {
+    DigiKeyboard.sendKeyStroke(keyStroke);
+}
+
+void DigiKeyboardMultilang::sendKeyStroke(byte keyStroke, byte modifiers) {
+    DigiKeyboard.sendKeyStroke(keyStroke, modifiers);
+}
+
 void DigiKeyboardMultilang::setLanguage(const uint16_t* language) {
     _lang = language;
 }
